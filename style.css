@@ -7,8 +7,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(17, 16, 16);
-    padding: 0;
-    margin: 0;
+    overflow-x: hidden;
 }
 .collection{
     padding: 0;
@@ -130,10 +129,11 @@ label{
     position: fixed;
     width: 100%;
     height: auto;
-    padding: auto;
+    padding: 10px;
     box-shadow: 0 4px 4px;
     z-index: 100;
     border-bottom: 1px solid red;
+    
 }
 .navbar h2{
     font-size: 28px;
@@ -295,8 +295,8 @@ i{
     font-weight: 500;
     background-color:black;
     color: white;
-    padding:70px 0 0 16px;
-}
+    padding-top: 100px;
+   }
 .classes{
     width:200px;
     height:250px;
@@ -457,7 +457,7 @@ i{
     text-align: center;
     font-size: 32px;
     font-weight: 700;
-    padding: 8px;
+    padding-top: 80px;
     color: white;
 }
 .form .form-input{
@@ -524,7 +524,7 @@ footer{
    
 }
 .footer-container{
-    width: 600px;
+    width: 100%;
     margin-left: 200px;
     display: grid;
     grid-template-columns: 200px 200px;
@@ -619,10 +619,10 @@ footer ul li a:hover{
     
 
 @media (max-width: 768px){
-   
+    
       .container{
         display: block;
-        text-align: center;
+        text-align: right;
     }
     .collection{
         flex-direction: column;
