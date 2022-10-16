@@ -430,11 +430,10 @@ i{
     background-size: cover;
     width: 100%;
     height:auto;
- 
    }
 .form-container{
     max-width: 80%;
-    padding:70px 16px;
+    padding:150px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -501,6 +500,7 @@ i{
     position: relative;
     left:50%;
     margin-top: 20%;
+    
     transform: translate(-50%,-50%);
     font-size: 20px;
     width: 350px;
@@ -737,4 +737,20 @@ footer ul li a:hover{
         color:red;
     
      }
+     .success-msg{
+        position: relative;
+        left:50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+        width: 350px;
+        height: auto;
+        font-weight: 400;
+        color:darkgray;
+        background-color: white;
+        text-align: center;
+        padding:40px 20px;
+        border-radius: 12px;
+        box-shadow: 1px 1px 16px rgba(18, 238, 29, 0.5);
+    }
 }
