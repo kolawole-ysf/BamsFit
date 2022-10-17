@@ -121,8 +121,9 @@ label{
 }
 .grid{
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
+    grid-row-gap: 80px;
 }
 /*------------------Navbar-------------------*/
 .navbar{
@@ -295,7 +296,8 @@ i{
     font-weight: 500;
     background-color:black;
     color: white;
-    padding-top: 100px;
+    padding-top: 80px;
+    padding-bottom: 10px;
    }
 .classes{
     width:200px;
@@ -433,8 +435,9 @@ i{
    }
 .form-container{
     max-width: 80%;
-    padding:150px 16px;
+    padding:50px 16px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
@@ -447,7 +450,6 @@ i{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: auto;
     padding: 0;
 }
 .form h2{
@@ -498,10 +500,8 @@ i{
 }
 .success-msg{
     position: relative;
-    left:50%;
-    margin-top: 20%;
-    
-    transform: translate(-50%,-50%);
+    margin: auto;
+    margin-top: 50%;
     font-size: 20px;
     width: 350px;
     height: auto;
@@ -519,21 +519,13 @@ footer{
     width: 100%;
     height: auto;
     background-color: #1d1e1f;
-    padding-top: 40px;
+    padding-top: 40px 0;
     position: relative;
    
 }
-.footer-container{
-    width: 100%;
-    margin-left: 200px;
-    display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 200px 200px;
-    grid-column-gap: 100px;
-    margin-bottom: 10px;
-}
 
-.footer-container h2{
+
+footer h2{
     margin-left: 20px;
     font-size: 28px;
     color: white;
@@ -597,7 +589,7 @@ footer ul li a:hover{
     border-radius: 25px;
     background-color: #2c2f30;
     right:50%;
-    position: absolute;
+        position: absolute;
    border-color: white;
    color: white;
      display: flex;
@@ -619,8 +611,17 @@ footer ul li a:hover{
     
 
 @media (max-width: 768px){
-    
-      .container{
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        box-shadow: 0 4px 4px;
+        z-index: 100;
+        border-bottom: 1px solid red;
+        
+    }
+    .container{
         display: block;
         background-color: transparent;
         text-align: center;
@@ -665,8 +666,8 @@ footer ul li a:hover{
     .popular-classes{
         padding: 20px;
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         color: white;
         background-color: rgb(14, 13, 13);
@@ -708,16 +709,13 @@ footer ul li a:hover{
         width: 100%;
         height: 200px;
     }
-    .footer-container{
-        width: 600px;
-        margin-left: 10px;
+   
+    .grid{
         display: grid;
-        grid-template-columns: 200px;
-        grid-template-rows: 200px 200px 200px;
-        grid-column-gap: 50px;
-        margin-bottom: 10px;
-    }
-    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-row-gap: 4px;
+    }    
     .form .form-input{
         width: auto;
         margin-bottom: 20px;
@@ -740,18 +738,20 @@ footer ul li a:hover{
      }
      .success-msg{
         position: relative;
-        left:50%;
-        top:50%;
-        transform: translate(-50%,-50%);
-        font-size: 20px;
-        width: 350px;
+        margin: auto;
+        margin-top: 50%;
+        font-size: 16px;
+        width: 200px;
         height: auto;
         font-weight: 400;
         color:darkgray;
         background-color: white;
         text-align: center;
-        padding:40px 20px;
+        padding:20px 10px;
         border-radius: 12px;
         box-shadow: 1px 1px 16px rgba(18, 238, 29, 0.5);
+    }
+    .sqr1, .sqr2, .sqr3{
+        text-align: left;
     }
 }
