@@ -622,7 +622,8 @@ footer ul li a:hover{
     
       .container{
         display: block;
-        text-align: right;
+        background-color: transparent;
+        text-align: center;
     }
     .collection{
         flex-direction: column;
