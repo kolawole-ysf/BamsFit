@@ -513,6 +513,87 @@ i{
     border-radius: 12px;
     box-shadow: 1px 1px 16px rgba(18, 238, 29, 0.5);
 }
+/*-------------------About Us----------------*/
+.about{
+    position: relative;
+    width: 100%;
+    background-image: url('https://www.heart.org/-/media/Images/Healthy-Living/Fitness/BreakingDownBarriersFitness.jpg?h=417&w=740&hash=DC427ED98E1ED6D0D269A8131CF0AF89');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: fill;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 0 10%;
+}
+.about-text{
+    background-color: black;
+    height:auto;
+    width: 60%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 12px;
+}
+.about-text h2{
+    font-size: 28px;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px;
+    color: white;
+}
+.about-text p{
+    font-size: 16px;
+    text-align: left;
+    padding: 0 20px;
+    line-height: 24px;
+}
+.icons{
+    padding: 20px;
+    display: flex;
+    width: auto;
+   justify-content: flex-start;
+   align-items: flex-start;
+}
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.icon i{
+    font-size: 24px;
+    color: red;
+    margin-left: 6px;
+}
+.about-image{
+    text-align: center;
+    height:400px
+}
+
+.profile-img, .p-image{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 12px;
+}
+.about-image h2{
+    font-weight: 800;
+    font-size: 20px;
+    color:white;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 0;
+}
+.about-image h2 span{
+    color: red;
+}
 /*-------------------Footer----------------*/
 footer{
     margin-top: 20px;
@@ -647,10 +728,14 @@ footer ul li a:hover{
         background-color: black;
     }
    .text-area h1, .text-area p{
-    text-align: center;
+    text-align: left;
+   }
+   .text-area p{
+    font-size: 18px;
    }
     .text-area h1{
-        margin-top: 200px;
+        margin-top: 80px;
+        font-size: 42px;
     }
     .feature-showcase, img{
         position:relative;
@@ -663,6 +748,36 @@ footer ul li a:hover{
         justify-content: space-between;
        
     }
+    .popular-gallery h2{
+        display: block;
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        background-color:black;
+        color: white;
+        padding-top: 80px;
+        padding-bottom: 10px;
+       }
+       .popular h2{
+        font-size: 24px;
+       }
+       .feature{
+        max-width: 350px;
+        height: 350px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: white;
+        background-color:transparent;
+        padding: 12px;
+        border:1px solid rgb(247, 70, 70);
+        margin-bottom: 20px;
+        margin-top: 10px;
+        transition: all .3s ease-in-out;
+       
+    }
     .popular-classes{
         padding: 20px;
         display: flex;
@@ -671,6 +786,9 @@ footer ul li a:hover{
         align-items: center;
         color: white;
         background-color: rgb(14, 13, 13);
+    }
+    .classes h2{
+        font-size: 16px;
     }
     .Pricing{
         width: 100%;
@@ -753,5 +871,34 @@ footer ul li a:hover{
     }
     .sqr1, .sqr2, .sqr3{
         text-align: left;
+    }
+    .about{
+        padding: 10px;
+        flex-direction: column;
+    }
+    .about-text{
+        background-color: black;
+        height:auto;
+        width: 100%;
+        margin-top: 20%;
+        margin-bottom: 10%;
+        border-radius: 12px;
+    }
+    .about-text h2{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: left;
+        padding: 20px;
+        color: white;
+    }
+    .about-text p{
+        font-size: 12px;
+        text-align: left;
+        padding: 0 20px;
+       
+    }
+    .profile-img, .p-image{
+        width: 200px;
+        height: 200px;
     }
 }
