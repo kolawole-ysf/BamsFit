@@ -205,8 +205,7 @@ i{
 /*--------------------------Features--------------------------------*/
 .special-feature{
     background-color: black;
-    margin-top: 20px;
-}
+   }
 .feature:hover{
     max-width: 400px;
     max-height: 400px;
@@ -267,9 +266,7 @@ i{
     font-size: 12px;
 }
 /*--------------------------Popular Classes--------------------------------*/
-.popular{
-    margin-top: 20px;
-}
+
 .popular-classes{
     padding: 20px;
     display: flex;
@@ -331,7 +328,7 @@ i{
     height: 550px;
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    
    
 }
 /*--------------------------Pricing Section--------------------------------*/
@@ -342,7 +339,6 @@ i{
     display: block;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
     background-color: black;
 }
 .Pricing h2{
@@ -596,7 +592,6 @@ i{
 }
 /*-------------------Footer----------------*/
 footer{
-    margin-top: 20px;
     width: 100%;
     height: auto;
     background-color: #1d1e1f;
@@ -778,6 +773,22 @@ footer ul li a:hover{
         transition: all .3s ease-in-out;
        
     }
+    .feature:hover{
+        max-width: 350px;
+        height: 350px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: white;
+        background-color: rgba(32, 30, 30, 0.7);
+        border: none;
+        padding: 12px;
+        margin-bottom: 20px;
+        box-shadow: 1px 1px 12px rgb(245, 64, 64);
+       
+    }
     .popular-classes{
         padding: 20px;
         display: flex;
@@ -798,7 +809,10 @@ footer ul li a:hover{
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        background-color: rgb(27, 26, 26);
+        background-color: rgb(0, 0, 0);
+    }
+    .Pricing h2{
+        font-size: 24px;
     }
     .Pricing-card{
         width: auto;
