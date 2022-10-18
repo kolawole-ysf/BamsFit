@@ -247,6 +247,7 @@ i{
     margin-left: 10px;
     display: flex;
     align-items: center;
+    margin-top: 0;
 }
 .star > i{
     font-size: 28px;
@@ -254,13 +255,13 @@ i{
 }
 .feature h2{
     font-size: 20px;
-    padding: 12px;
     text-align: left;
+    
 }
 .feature p{
     text-align: left;
-    padding: 12px;
     line-height: 20px;
+    
 }
 .hero-btn, i{
     font-size: 12px;
@@ -771,7 +772,14 @@ footer ul li a:hover{
         margin-bottom: 20px;
         margin-top: 10px;
         transition: all .3s ease-in-out;
-       
+    }
+    .feature h2{
+        font-size: 20px;
+        text-align: left;
+    }
+    .feature p{
+        text-align: left;
+        line-height: 20px;
     }
     .feature:hover{
         max-width: 350px;
@@ -812,7 +820,7 @@ footer ul li a:hover{
         background-color: rgb(0, 0, 0);
     }
     .Pricing h2{
-        font-size: 24px;
+        font-size: 20px;
     }
     .Pricing-card{
         width: auto;
