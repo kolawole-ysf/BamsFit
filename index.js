@@ -6,6 +6,37 @@ toggleBtn.addEventListener('click', toggleOn);
 function toggleOn(){
     document.querySelector('.collection').classList.toggle('active');
 }
+//workout category with instruction
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '2bc8e36a21msh5562561682438c3p1ae5a5jsn9678eb0a4d8b',
+		'X-RapidAPI-Host': 'exercises-by-api-ninjas.p.rapidapi.com'
+	}
+};
+document.querySelector('#biceps').addEventListener('click', getBiceps);
+function getBiceps(){
+fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=biceps', options)
+	.then(response => response.json())
+	.then(data => {
+        let output='';
+        data.forEach(element => {
+            console.log(element)
+            output+=`
+                <div class="card">
+                <h2>Description: ${element.name}</h2>
+                 <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                 </div>
+         `;
+            console.log(element.name)
+        });
+        document.querySelector('.description').innerHTML = output;
+        })
+	.catch(err => console.error(err));
+}
+
+
+
 //image slider on showcase
 let i=0,
     images=[];
@@ -52,6 +83,10 @@ function submitForm(e){
     if(!(isNaN(nameInput.value)) || nameInput.value.length < 3 || nameInput.value===''){
         nameInput.nextElementSibling.classList.remove('hidden');
         nameInput.classList.add('invalid');
+        setTimeout(()=>{
+            nameInput.nextElementSibling.classList.add('hidden');
+        nameInput.classList.remove('invalid');
+        },5000)
         return false;
         
     }
@@ -92,6 +127,4 @@ function submitForm(e){
     subjectInput.value='';
     messageInput.value='';
 }
-
-
 
