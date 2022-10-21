@@ -6,7 +6,15 @@ const options = {
 		'X-RapidAPI-Host': 'exercises-by-api-ninjas.p.rapidapi.com'
 	}
 };
+//create events for exercises
 document.querySelector('#biceps').addEventListener('click', getBiceps);
+document.querySelector('#triceps').addEventListener('click', getTriceps);
+document.querySelector('#chest').addEventListener('click', getChest);
+document.querySelector('#quads').addEventListener('click', getQuad);
+document.querySelector('#glutes').addEventListener('click', getGlute);
+document.querySelector('#abs').addEventListener('click', getAbdominal);
+
+//get biceps exercises
 function getBiceps(){
 fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=biceps', options)
 	.then(response => response.json())
@@ -26,3 +34,106 @@ fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=biceps
         })
 	.catch(err => console.error(err));
 }
+
+//get triceps exercises
+function getTriceps(){
+    fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=triceps', options)
+        .then(response => response.json())
+        .then(data => {
+            let output='';
+            data.forEach(element => {
+                console.log(element)
+                output+=`
+                    <div class="card">
+                    <h2>Description: ${element.name}</h2>
+                     <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                     </div>
+             `;
+                console.log(element.name)
+            });
+            document.querySelector('.description').innerHTML = output;
+            })
+        .catch(err => console.error(err));
+    }
+   
+    //get chest exercises
+function getChest(){
+    fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=chest', options)
+        .then(response => response.json())
+        .then(data => {
+            let output='';
+            data.forEach(element => {
+                console.log(element)
+                output+=`
+                    <div class="card">
+                    <h2>Description: ${element.name}</h2>
+                     <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                     </div>
+             `;
+                console.log(element.name)
+            });
+            document.querySelector('.description').innerHTML = output;
+            })
+        .catch(err => console.error(err));
+    }
+//get quadriceps exercises
+function getQuad(){
+    fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=quadriceps', options)
+        .then(response => response.json())
+        .then(data => {
+            let output='';
+            data.forEach(element => {
+                console.log(element)
+                output+=`
+                    <div class="card">
+                    <h2>Description: ${element.name}</h2>
+                     <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                     </div>
+             `;
+                console.log(element.name)
+            });
+            document.querySelector('.description').innerHTML = output;
+            })
+        .catch(err => console.error(err));
+    }
+//get glute exercises
+function getGlute(){
+    fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=glutes', options)
+        .then(response => response.json())
+        .then(data => {
+            let output='';
+            data.forEach(element => {
+                console.log(element)
+                output+=`
+                    <div class="card">
+                    <h2>Description: ${element.name}</h2>
+                     <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                     </div>
+             `;
+                console.log(element.name)
+            });
+            document.querySelector('.description').innerHTML = output;
+            })
+        .catch(err => console.error(err));
+    }
+    //get Abdominals exercises
+function getAbdominal(){
+    fetch('https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises?muscle=abdominals', options)
+        .then(response => response.json())
+        .then(data => {
+            let output='';
+            data.forEach(element => {
+                console.log(element)
+                output+=`
+                    <div class="card">
+                    <h2>Description: ${element.name}</h2>
+                     <p><b>Exercise Demo:</b> <br>${element.instructions}</p>
+                     </div>
+             `;
+                console.log(element.name)
+            });
+            document.querySelector('.description').innerHTML = output;
+            })
+        .catch(err => console.error(err));
+    }
+
