@@ -13,6 +13,7 @@ document.querySelector('#chest').addEventListener('click', getChest);
 document.querySelector('#quads').addEventListener('click', getQuad);
 document.querySelector('#glutes').addEventListener('click', getGlute);
 document.querySelector('#abs').addEventListener('click', getAbdominal);
+const workoutBtns=document.querySelectorAll('.category-btn');
 
 //get biceps exercises
 function getBiceps(){
@@ -134,6 +135,17 @@ function getAbdominal(){
             });
             document.querySelector('.description').innerHTML = output;
             })
+           
         .catch(err => console.error(err));
     }
 
+function workoutBtn(){
+    for(let i=0; i<workoutBtns.length; i++){
+        workoutBtns[i].addEventListener('click',function(){
+            let currentBtn=document.querySelectorAll('.btn-active');
+            currentBtn[0].className=currentBtn[0].className.replace('btn-active','');
+            this.className+=' btn-active';
+        })
+    }
+}
+workoutBtn()
