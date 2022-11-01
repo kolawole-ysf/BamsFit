@@ -152,7 +152,7 @@ label{
     color: white;
     cursor: pointer;
 }
-.navbar h2 span{
+span{
     color: red;
 }
 .navbar h2 a{
